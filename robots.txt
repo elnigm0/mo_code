@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://elnigm0.github.io/Kheir-Misr/sitemap.xml
+Sitemap: https://elnigm0.github.io/mo_code/sitemap.xml
