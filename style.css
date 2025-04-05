@@ -1,0 +1,755 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/* Arabic pages */
+body:lang(ar) {
+    font-family: "Cairo", sans-serif;
+}
+
+/* English pages */
+body:lang(en) {
+    font-family: 'Roboto', sans-serif; /*  'Open Sans' */
+}
+.arabic-page {
+    font-family: "Cairo", sans-serif;
+}
+
+.english-page {  
+ 
+  font-family: 'Roboto', sans-serif; /*  'Open Sans' */
+}
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+    top: 0;
+
+}
+.logo {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700px;
+    font-size: 1.8em;
+}
+.logo span {
+        color: #455ba5;
+}
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+.navigation a{
+    text-decoration: none;
+    color: #455ba5;
+    font-size: 1.1em;
+    font-weight:500 ;
+    margin-left: 10px;
+}
+.navigation a:hover{
+    color: #5a78d9;
+}
+/* Start language */
+.language {
+    
+    background-color: #c1c1c1;
+    padding: 5px;
+    border: 1px solid #fff;
+    color: #000;
+    text-decoration: none;
+
+}
+.language:hover {
+    background-color: #0081ff;
+}
+.language-1 {
+    
+    background-color: #c1c1c1;
+    padding: 5px;
+    border: 1px solid #fff;
+    color: #000;
+    text-decoration: none;
+
+}
+.language:hover {
+    background-color: #0081ff;
+}
+
+/* End language */
+
+details {
+    color: #fff;
+    z-index: 999;
+}
+details {
+  position: absolute; /* تثبيته في الهيدر */
+  top: 10px; /* مسافة صغيرة من الأعلى */
+  right: 10px; /* جعله في الزاوية اليمنى */
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  margin-left: 1000px;
+  padding: -1%;
+}
+
+summary {
+  list-style: none; /* إزالة المثلث الافتراضي */
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+}
+
+summary i {
+     font-size: 20px ;
+     align-items: center;
+     color: #005bd7 ;     
+}
+
+summary::after {
+  font-size: 50px;
+  color: #007bff;
+}
+
+details[open] {
+  width: auto; /* تكبير الحجم عند الفتح */
+  height: auto;
+  padding: 5px;
+}
+
+details a {
+  display: block;
+  font-size: 5px; /* تصغير حجم النص */
+  padding: 3px 0; /* تقليل المسافة بين الروابط */
+  text-decoration: none;
+  color: #333;
+}
+
+details a:hover {
+  color: #007bff;
+}
+
+/* End navigation */
+
+section {
+    padding: 100px 200px;
+}
+
+
+/* Start main */
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+.btn {
+    border: 2px solid #d5d5d5;
+    border-right: none;
+    border-left: none;
+    border-radius: 10px;
+    padding: 12px;
+}
+.main a {
+    text-decoration: none;
+    color: #d5d5d5;
+    border: 2px solid #6a78ff;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 10px;
+    padding: 7px;
+    transition: 0.9s;
+}
+.main a:hover{
+    border-top: 2px solid #6a78ff;
+    border-bottom: 2px solid #6a78ff;   
+    color: #6a78ff; 
+}
+/* End main  */
+
+
+/* Start about us */
+/* تنسيق قسم "من نحن!" بخلفية بتدرجات داكنة */
+#about-us {
+  background: linear-gradient(135deg, #000, #251e47);
+  padding: 40px 20px;
+  color: #fff;
+}
+#about-us .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #4fc3f7;
+}
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+.profile-card {
+  background: #fff;
+  color: #333;
+  border-radius: 15px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.profile-card:hover {
+  transform: translateY(-10px);
+}
+.profile-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 15px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #4fc3f7;
+}
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.profile-info p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+/* أيقونات الروابط منفصلة وكبيرة */
+.profile-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+.profile-link i {
+  font-size: 18px;
+  color: #4fc3f7;
+}
+.profile-link span {
+  font-weight: bold;
+}
+.profile-link:hover {
+  transform: scale(1.1);
+}
+.about-description p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #999;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.about-values {
+  margin-top: 30px;
+}
+
+.about-values h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #999;
+  text-align: right;
+}
+
+.about-values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-values li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #999;
+  text-align: right;
+}
+
+.about-values i {
+  color: green;
+  margin-left: 10px;
+}
+/* End about us  */
+
+
+
+/* Start projects */
+.projects {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+.projects .content{
+    margin-top: 30px;
+ 
+}
+.project-card{
+    background-color: ;
+    background: linear-gradient(to right, #8540ff, #454ea5);
+    border: 1px solid #000;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px ;   
+    transition: 0.7s ease;
+    
+}
+
+.project-card:hover{
+    transform: scale(1.1);
+}
+
+.project-image img{
+    width: 100%;
+    
+}
+
+
+.project-card:hover .project-image{
+    opacity: 0.9;
+}
+
+.project-info{
+    padding: 1em;
+
+
+}
+
+.project-category{
+    font-size: 0.8em ;
+    color: #aafff4;
+    
+}
+
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+    color: #fff;
+}
+.project-title a {
+    color: #00eaff;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 80px;
+    background: transparent;
+    border: 2px solid #8098ff;
+    border-right: none;
+    border-left: none;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 80px;
+
+}
+
+
+
+.project-card {
+
+    scroll-snap-align: start;
+}
+/* End  projects */
+
+
+/* Start contact */
+.cards contact {
+    width: 100%;
+    height: calc(100vh - 20px);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(100vh - 30px);
+    background-size: cover;
+    align-items: center;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    margin-top: -80px;
+}
+.card{
+    background-color: transparent;
+    width: 21.25em;
+    box-shadow: 0 5px 25px #8098ff;
+    border-radius: 10px;
+    padding:25px ;
+    margin: 15px;
+    transition: 1.7s ease;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.icon {
+    font-size: 8em;
+    text-align: center;
+    
+}
+
+.info{
+    text-align: center;
+}
+.info h3{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+.info p {
+    color: #3bff00;
+}
+.content .card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.contact .icon{
+
+    font-size: 4.5em;
+}
+
+.contact .info h3{
+    
+    color: #d76c74;
+    
+}
+
+.contact .info p {
+     font-size: 10px ;
+    color: #fff;
+}
+.phone-icon {
+    color: #40e0ff;
+}
+.email-icon {
+    color: #006cff;
+}
+
+/* Icon */
+/***** تنسيق السكشن الرئيسي *****/
+.cards.contact {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cards.contact .title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333;
+}
+
+/***** تنسيق عام للبطاقات *****/
+.social-card {
+  width: 100%;
+  display: flex;               /* ترتيب أفقي للأيقونة والنص */
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 15px;         /* زوايا منحنية */
+  color: #fff;                 /* لون النص */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* ظل */
+  padding: 20px;               /* مسافة داخلية */
+  box-sizing: border-box;
+}
+
+/***** أيقونة كل بطاقة *****/
+.social-icon {
+  width: 70px;                 /* عرض مربع الأيقونة */
+  height: 70px;
+  min-width: 70px;             /* لكي لا ينكمش في الشاشات الصغيرة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;             /* حجم الأيقونة */
+  border-radius: 10px;         /* زوايا منحنية حول الأيقونة */
+  margin-left: 20px;           /* مسافة بين الأيقونة والنص (في الاتجاه RTL يمكن استعمال margin-right) */
+}
+
+/***** النص داخل البطاقة *****/
+.social-text {
+  flex: 1;                     /* كي يأخذ بقية المساحة */
+  padding: 0 10px;             /* مسافة أفقية بسيطة حول النص */
+}
+
+.social-text h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #fff;
+}
+.social-text a {
+    color: #caaaff;
+}
+.social-text p {
+  margin: 0;
+  font-size: 15px;
+  color: #f0f0f0;
+}
+
+/***** بطاقة فيسبوك *****/
+.facebook-card {
+  /* تدرّج ألوان من الأزرق الغامق إلى درجة أخرى */
+  background: linear-gradient(to right, #3b5998, #2d4373);
+}
+
+.facebook-card .social-icon {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+/***** بطاقة يوتيوب *****/
+.youtube-card {
+  background: linear-gradient(to right, #ff0000, #b50000);
+}
+
+.youtube-card .social-icon {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+/***** بطاقة واتساب *****/
+.whatsapp-card {
+  background: linear-gradient(to right, #25d366, #128c7e);
+}
+
+.whatsapp-card .social-icon {
+  background-color: #25d366;
+  color: #fff;
+}
+
+
+/***** phone card *****/
+.phone-card {
+  background: linear-gradient(to right, #fff100,#c3b800);
+}
+
+.phone-card .social-icon {
+  background-color: #fff100;
+  color: #fff;
+}
+
+
+
+/***** Email card *****/
+.email-card {
+  background: linear-gradient(to right, #ff0088,#970051);
+}
+
+.email-card .social-icon {
+  background-color: #ff0088;
+  color: #fff;
+}
+
+
+/* End  contact */
+
+/* Start media queries */
+@media(max-width:1023px){
+    
+    header {
+        padding: 20px 12px;
+    }
+    
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title {
+        font-size: 1.8em;
+    }
+    
+    section {
+        padding: 80px 20px;
+    }
+    
+
+@media(max-width:641px){
+
+    body {
+        font-size: 12px;
+    }
+
+
+@media(max-width:300px){
+    
+    body {
+        font-size: 10px;
+    }
+        details {
+        top: -2px;
+        right: -0px;
+
+    }
+}
+
+@media(max-width:435px){
+    
+    details {
+        top: -0.0px;
+        right: -0.0px;
+
+    }
+    
+}
+@media(max-width:1023px){
+    
+    header {
+        padding: 20px 12px;
+    }
+    
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title {
+        font-size: 1.8em;
+    }
+    
+    section {
+        padding: 80px 20px;
+    }
+    
+    .min-content h2{
+        font-size: 1em;
+    }
+    
+    .min-content h3{
+        font-size: 1.6em;
+    }
+    
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+    .content {
+        margin-top: -300px;
+    }
+}
+@media(max-width:641px){
+
+    body {
+        font-size: 12px;
+    }
+   .min-content h2{
+        font-size: 0.8em;
+    }
+    
+   .min-content h3{
+        font-size: 1.4em;
+    }
+}
+
+
+@media(max-width:300px){
+    
+    body {
+        font-size: 10px;
+    }
+        details {
+        top: -2px;
+        right: -0px;
+
+    }
+}
+
+@media(max-width:435px){
+    
+    details {
+        top: -0.0px;
+        right: -0.0px;
+
+    }
+    
+}
+
+
+/* تحسين التصميم للشاشات الصغيرة */
+@media (min-width: 435px) {
+  .email-text p {
+    font-size: 10px; /* تصغير الخط */
+  }
+}
+
+@media (min-width: 375px) {
+  .social-card {
+    flex-direction: column; /* تكديس العناصر رأسيًا */
+    align-items: flex-start;
+  }
+
+  .social-icon {
+    margin-bottom: 5px;
+  }
+
+  .email-text p {
+    font-size: 8px; /* تصغير الخط أكثر */
+    text-align: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .social-text p {
+    font-size: 0.3rem; /* تصغير الخط لأقصى درجة مناسبة */
+      flex: 1;  
+      margin-top: 18px;  
+                  
+  }
+  
+
+}
+
+/* End media queries */
+
+
