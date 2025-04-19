@@ -4,6 +4,13 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+/*
+=============================
+=======Start navigation======
+=============================
+*/
+
 /* Arabic pages */
 body:lang(ar) {
     font-family: "Cairo", sans-serif;
@@ -137,16 +144,27 @@ details a {
 details a:hover {
   color: #007bff;
 }
+/*
+=============================
+========End navigation=======
+=============================
+*/
 
-/* End navigation */
 
+
+/* section */
 section {
     padding: 100px 200px;
 }
 
 
-/* Start main */
 
+
+/*
+=============================
+=========Start main==========
+=============================
+*/
 .main {
     width: 100%;
     height: 100vh;
@@ -179,10 +197,20 @@ section {
     border-bottom: 2px solid #6a78ff;   
     color: #6a78ff; 
 }
-/* End main  */
+/*
+=============================
+========End main=========
+=============================
+*/
 
 
-/* Start about us */
+
+
+/*
+=============================
+=======Start  about us=======
+=============================
+*/
 /* تنسيق قسم "من نحن!" بخلفية بتدرجات داكنة */
 #about-us {
   background: linear-gradient(135deg, #000, #251e47);
@@ -297,24 +325,37 @@ section {
   color: green;
   margin-left: 10px;
 }
-/* End about us  */
+/*
+=============================
+========End about us=========
+=============================
+*/
 
 
 
-/* Start projects */
+
+/*
+=============================
+=======Start  projects=======
+=============================
+*/
+
 .projects {
     width: 100%;
     height: 100vh;
     background-size: cover;
-    display: flex;
+    display: flex;   
     align-items: center;
     justify-content: center;
     background-position: center;
     transition: background-image 1s ease-in-out;
+    
 }
 .projects .content{
     margin-top: 30px;
- 
+    display: flex;
+    flex-direction: row;
+    overflow-x:auto ;
 }
 .project-card{
     background-color: ;
@@ -328,7 +369,6 @@ section {
     transition: 0.7s ease;
     
 }
-
 .project-card:hover{
     transform: scale(1.1);
 }
@@ -337,8 +377,6 @@ section {
     width: 100%;
     
 }
-
-
 .project-card:hover .project-image{
     opacity: 0.9;
 }
@@ -346,15 +384,11 @@ section {
 .project-info{
     padding: 1em;
 
-
 }
-
 .project-category{
     font-size: 0.8em ;
-    color: #aafff4;
-    
+    color: #aafff4;    
 }
-
 .project-title{
     display: flex;
     justify-content: space-between;
@@ -381,19 +415,24 @@ section {
     border-radius: 10px;
     width: 100%;
     margin-top: 80px;
-
 }
-
-
-
 .project-card {
-
     scroll-snap-align: start;
 }
-/* End  projects */
+/*
+=============================
+========End  projects========
+=============================
+*/
 
 
-/* Start contact */
+
+
+/*
+=============================
+========Start contact========
+=============================
+*/
 .cards contact {
     width: 100%;
     height: calc(100vh - 20px);
@@ -426,17 +465,14 @@ section {
     margin: 15px;
     transition: 1.7s ease;
 }
-
 .card:hover{
     transform: scale(1.1);
 }
-
 .icon {
     font-size: 8em;
     text-align: center;
-    
+   
 }
-
 .info{
     text-align: center;
 }
@@ -476,8 +512,8 @@ section {
     color: #006cff;
 }
 
-/* Icon */
-/***** تنسيق السكشن الرئيسي *****/
+
+/***** style main section *****/
 .cards.contact {
   width: 100%;
   padding: 20px;
@@ -491,7 +527,7 @@ section {
   color: #333;
 }
 
-/***** تنسيق عام للبطاقات *****/
+/***** stayles cards *****/
 .social-card {
   width: 100%;
   display: flex;               /* ترتيب أفقي للأيقونة والنص */
@@ -504,7 +540,7 @@ section {
   box-sizing: border-box;
 }
 
-/***** أيقونة كل بطاقة *****/
+/***** Icon all cards *****/
 .social-icon {
   width: 70px;                 /* عرض مربع الأيقونة */
   height: 70px;
@@ -517,7 +553,7 @@ section {
   margin-left: 20px;           /* مسافة بين الأيقونة والنص (في الاتجاه RTL يمكن استعمال margin-right) */
 }
 
-/***** النص داخل البطاقة *****/
+/***** text in card *****/
 .social-text {
   flex: 1;                     /* كي يأخذ بقية المساحة */
   padding: 0 10px;             /* مسافة أفقية بسيطة حول النص */
@@ -537,9 +573,8 @@ section {
   color: #f0f0f0;
 }
 
-/***** بطاقة فيسبوك *****/
+/***** Facebook card *****/
 .facebook-card {
-  /* تدرّج ألوان من الأزرق الغامق إلى درجة أخرى */
   background: linear-gradient(to right, #3b5998, #2d4373);
 }
 
@@ -548,7 +583,7 @@ section {
   color: #fff;
 }
 
-/***** بطاقة يوتيوب *****/
+/***** YouTube card *****/
 .youtube-card {
   background: linear-gradient(to right, #ff0000, #b50000);
 }
@@ -558,7 +593,7 @@ section {
   color: #fff;
 }
 
-/***** بطاقة واتساب *****/
+/***** WhatsApp card *****/
 .whatsapp-card {
   background: linear-gradient(to right, #25d366, #128c7e);
 }
@@ -590,11 +625,20 @@ section {
   background-color: #ff0088;
   color: #fff;
 }
+/*
+=============================
+======== End  contact========
+=============================
+*/
 
 
-/* End  contact */
 
-/* Start media queries */
+
+/*
+=============================
+=====Start media queries=====
+=============================
+*/ 
 @media(max-width:1023px){
     
     header {
@@ -715,7 +759,6 @@ section {
     
 }
 
-
 /* تحسين التصميم للشاشات الصغيرة */
 @media (min-width: 435px) {
   .email-text p {
@@ -749,7 +792,11 @@ section {
   
 
 }
+/*
+=============================
+======End media queries======
+=============================
+*/
 
-/* End media queries */
 
 
