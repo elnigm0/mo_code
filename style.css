@@ -5,8 +5,41 @@
   scroll-behavior: smooth;
 }
 body {
-    
+      background: linear-gradient(135deg, #000, #251e47);
+      background-image: url('./background4.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+  height: 100vh;
+  background-color: #000; /* الخلفية سوداء */
+  background-position: center center;
+/*   background-size: contain; /* أو cover لو عايزها تغطي الشاشة */ */
+
 }
+
+    /* ✅ شاشات أقل من 1024px */
+    @media (max-width: 1024px) {
+      body {
+        height: 500px;
+        background-size: 60%;
+      }
+    }
+
+    /* ✅ شاشات أقل من 768px (تابلت وموبايل أفقي) */
+    @media (max-width: 768px) {
+      body {
+        height: 400px;
+        background-size: 70%;
+      }
+    }
+
+    /* ✅ شاشات أقل من 480px (موبايل صغير) */
+    @media (max-width: 480px) {
+      body {
+        height: 350px;
+        background-size: 85%;
+      }
+    }
+
 /*
 =============================
 =======Start navigation======
@@ -43,7 +76,7 @@ header {
 }
 .logo {
     text-decoration: none;
-    color: #fff;
+    color: aqua;
     text-transform: uppercase;
     font-weight: 700px;
     font-size: 1.8em;
