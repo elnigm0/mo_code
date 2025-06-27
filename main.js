@@ -1,10 +1,9 @@
 const images = [
-    "background1.jpg",
+    "/* background1.jpg",
     "background2.jpg",
     "background3.jpg",
    
-];
-
+]; */
 let currentIndex = 0;
 document.addEventListener("DOMContentLoaded", function () {
     const mainSection = document.querySelector(".main,.projects,.contact");
