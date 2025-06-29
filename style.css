@@ -4,16 +4,8 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-body {
-      background: linear-gradient(135deg, #000, #251e47);
-      background-image: url('./background4.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-  height: 100vh;
-  background-color: #000; /* الخلفية سوداء */
-  background-position: center center;
-/*   background-size: contain; /* أو cover لو عايزها تغطي الشاشة */ */
-
+body { 
+  background-color: #fff;
 }
 
     /* ✅ شاشات أقل من 1024px */
@@ -74,27 +66,6 @@ header {
     top: 0;
 
 }
-.logo {
-    text-decoration: none;
-    color: aqua;
-    text-transform: uppercase;
-    font-weight: 700px;
-    font-size: 1.8em;
-}
-.logo span {
-        color: #e6007b;
-}
-.logo img {
-    width: 70px;
-    height: 70px;
-}
-.navigation {
-  display: flex;
-  overflow-x: auto; /* تفعيل التمرير الأفقي */
-  white-space: nowrap; /* منع العناصر من الانتقال إلى السطر التالي */
-  padding: 10px 0;
-  scrollbar-width: thin; /* لتقليل عرض شريط التمرير */
-}
 /* تحسين شريط التمرير */
 .navigation::-webkit-scrollbar {
   height: 3px; /* ارتفاع شريط التمرير */
@@ -115,10 +86,87 @@ header {
 .navigation a:hover{
     color: #ff00f1;
 }
+/*
+=============================
+=========Start nav mune======
+=============================
+*/
+.logo-head {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    position: fixed;
+}
+.logo-head img {
+    height: 70px;
+    width: 70px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+  margin-top: 80px;
+}
+
+/* تصميم قائمة الـ navigation */
+.navigation {
+  display: flex;
+  overflow-x: auto; /* تفعيل التمرير الأفقي */
+  white-space: nowrap; /* منع العناصر من الانتقال إلى السطر التالي */
+  padding: 10px 0;
+  scrollbar-width: thin; /* لتقليل عرض شريط التمرير */
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation ul li {
+  flex-shrink: 0; /* التأكد من أن العناصر لا تنكمش */
+  margin: 0 10px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  padding: 5px 10px;
+  display: inline-block;
+  white-space: nowrap; /* منع النصوص الطويلة من التمدد */
+  letter-spacing: normal;
+}
+
+/* تحسين شريط التمرير */
+.navigation::-webkit-scrollbar {
+  height: 8px; /* ارتفاع شريط التمرير */
+}
+
+.navigation::-webkit-scrollbar-thumb {
+  background: #ccc; /* لون شريط التمرير */
+  border-radius: 4px;
+}
+
+.navigation::-webkit-scrollbar-track {
+  background: #f4f4f4; /* لون خلفية شريط التمرير */
+}
+
+/*
+=============================
+=========End nav mune========
+=============================
+*/
 /* Start language */
 .language {
     
-    background: linear-gradient(to right, #002dff5b, #00ffc05b);
+    background: linear-gradient(to right, aqua, #000);
     padding: 5px;
     border: 1px solid aqua;
     color: #fff;
@@ -127,7 +175,7 @@ header {
 }
 .language-1 {
     
-    background: linear-gradient(to right, #002dff5b, #00ffc05b);
+    background: linear-gradient(to right, aqua, #000);
     padding: 5px;
     border: 1px solid aqua;
     color: #fff;
@@ -140,7 +188,7 @@ header {
 
 details {
     color: #fff;
-    z-index: 999;
+    z-index: 1000;
 }
 details {
   position: absolute; /* تثبيته في الهيدر */
@@ -173,7 +221,7 @@ summary i:hover {
     color: #00c0ff;
 }
 summary::after {
-  font-size: 50px;
+  font-size: 100px;
   color: #007bff;
 }
 
@@ -185,7 +233,7 @@ details[open] {
 
 details a {
   display: block;
-  font-size: 5px; /* تصغير حجم النص */
+  font-size: 15px; /* تصغير حجم النص */
   padding: 3px 0; /* تقليل المسافة بين الروابط */
   text-decoration: none;
   color: #333;
@@ -193,6 +241,18 @@ details a {
 
 details a:hover {
   color: #007bff;
+}
+.social-icons ul {
+    display: flex;
+    justify-content: space-between;
+}
+.social-icons ul li {
+    list-style: none;
+}
+.social-icons ul li a {
+    border: none;
+    color: #fff;
+    font-size: 10px;
 }
 /*
 =============================
@@ -217,50 +277,82 @@ section {
 */
 .main {
     width: 100%;
-    height: 100vh;
+    height: 100vh;     
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     background-position: center;
-    transition: background-image 1s ease-in-out;
+    border-bottom: 500px;
 }
-
-.main {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
-}
-
-.btn {
-    border: 2px solid #d5d5d5;
-    border-right: none;
-    border-left: none;
-    border-radius: 10px;
-    padding: 12px;
-}
-
-.main a {
+.introduction a {
+    border: 2px solid #000;
+    border-radius: 20px;
     text-decoration: none;
-    color: #d5d5d5;
-    border: 2px solid #e6007b;
-    border-top: none;
-    border-bottom: none;
-    border-radius: 10px;
-    padding: 7px;
+    color: #000;
+    padding: 8px;
+    padding-left: 50px;
+    padding-right: 50px;
     transition: 0.9s;
+    margin-top: 30px;
+}
+.introduction img {
+    width: 100%;
+    height: auto;
+    
+    margin-bottom: 30px;
+}
+.introduction p {
+    text-align: center;
+    width: 100%;   
 }
 
-.main a:hover{
-    border-top: 2px solid #ff0088;
-    border-bottom: 2px solid #ff0088;   
-    color: #6a78ff; 
+@media(min-width:435px){
+   .main {
+       height: auto;
+   }
+  .introduction img {
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+    margin-bottom: 30px;
 }
+ .btn {
+    margin-bottom: 50px;
+ }
+}
+
+@media(min-width:375px){
+   .main {
+       height: auto;
+   }
+  .introduction img {
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+ .btn {
+    margin-bottom: 50px;
+ }
+}
+
+@media(min-width:320px){
+   .main {
+       height: auto;
+   }
+  .introduction img {
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+ .btn {
+    margin-bottom: 50px;
+ }
+}
+
+
 /*
 =============================
 ========End main=========
@@ -413,7 +505,6 @@ section {
     justify-content: center;
     background-position: center;
     transition: background-image 1s ease-in-out;
-    
 }
 .projects .content{
     margin-top: 50px;
@@ -422,12 +513,11 @@ section {
     overflow-x:auto ;
 }
 .project-card{
-    background: linear-gradient(to right, #002dff5b, #00ffc05b);
-    border: 1px solid #00ffc0;
+    background: linear-gradient(to right, #050021, #000);
+    border: 1px solid #000;
     min-height: 14em;
     width: 23em;
     overflow: hidden;
-    border-radius: 10px;
     margin: 20px ;   
     transition: 0.7s ease;
     
@@ -438,8 +528,6 @@ section {
 
 .project-image img{
     width: 100%;
-    padding: 30px;
-    border-radius: 40px;
 }
 .project-card:hover .project-image{
     opacity: 0.9;
@@ -517,7 +605,7 @@ section {
     align-items: center;
     justify-content: center;
     background-position: center;
-    transition: background-image 1s ease-in-out;
+    
 }
 .content{
     display: flex;
@@ -600,7 +688,6 @@ section {
   text-align: center;
   margin-bottom: 30px;
   font-size: 24px;
-  color: #333;
 }
 
 /***** stayles cards *****/
@@ -638,74 +725,54 @@ section {
 .social-text h3 {
   margin: 0 0 10px;
   font-size: 20px;
-  color: #fff;
+  color: #000;
 }
 .social-text a {
-    color: #fff;
-    background: linear-gradient(to bottom, transparent, #ff6915ae);
+    color: #000;
     padding: 6px;
     display: block;    
     text-align: center;
     border-radius: 5px;
     letter-spacing: 1px;
     font-size: 15px;
+    letter-spacing: normal;
 }
 .social-text p {
   margin: 0;
   font-size: 15px;
-  color: #f0f0f0;
+  color: #000;
 }
 
 /***** Facebook card *****/
-.facebook-card {
-  background: linear-gradient(to right, #3b5998, #2d4373);
-}
-
 .facebook-card .social-icon {
-  background-color: #3b5998;
+  background: linear-gradient(to right, #3b5998, #2d4373);
   color: #fff;
 }
 
 /***** YouTube card *****/
-.youtube-card {
-  background: linear-gradient(to right, #ff0000, #b50000);
-}
-
 .youtube-card .social-icon {
-  background-color: #ff0000;
+  background: linear-gradient(to right, #ff0000, #b50000);
   color: #fff;
 }
 
 /***** WhatsApp card *****/
-.whatsapp-card {
-  background: linear-gradient(to right, #25d366, #128c7e);
-}
-
 .whatsapp-card .social-icon {
-  background-color: #25d366;
+  background: linear-gradient(to right, #25d366, #128c7e);
   color: #fff;
 }
 
 
 /***** phone card *****/
-.phone-card {
-  background: linear-gradient(to right, #fff100,#c3b800);
-}
-
 .phone-card .social-icon {
-  background-color: #fff100;
+  background: linear-gradient(to right, #fff100,#c3b800);
   color: #fff;
 }
 
 
 
 /***** Email card *****/
-.email-card {
-  background: linear-gradient(to right, #ff0088,#970051);
-}
-
 .email-card .social-icon {
-  background-color: #ff0088;
+  background: linear-gradient(to right, #ff0088,#970051);
   color: #fff;
 }
 /*
@@ -741,13 +808,13 @@ section {
 }
 
 .article h1 {
-    color: #fff;
+    color: silver;
     font-size: 30px;
     text-align: center;
 }
 
 .article p {
-    color: #95ffb7;
+    color: #81003a;
     text-align: center;
 }
 
