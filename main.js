@@ -1,51 +1,52 @@
-const images = [
-    "/* background1.jpg",
-    "background2.jpg",
-    "background3.jpg",
-   
-]; */
-let currentIndex = 0;
-document.addEventListener("DOMContentLoaded", function () {
-    const mainSection = document.querySelector(".main,.projects,.contact");
-    let currentIndex = 0;
 
-    function changeBackground() {
-        currentIndex = (currentIndex + 1) % images.length;
-        mainSection.style.backgroundImage = `url(${images[currentIndex]})`;
-    }
 
-    // تعيين الخلفية الأولى
-    mainSection.style.backgroundImage = `url(${images[currentIndex]})`;
 
-    // تغيير الخلفية كل 5 ثوانٍ
-    setInterval(changeBackground, 8000);
-});
-const slider = document.querySelector('.projects');
+
+
+
+/*
+=============================
+=======Start navigation======
+=============================
+*/
+const navigation = document.querySelector('.navigation');
+
 let isDown = false;
 let startX;
 let scrollLeft;
 
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
+// عند الضغط على القائمة
+navigation.addEventListener('mousedown', (e) => {
+  isDown = true;
+  navigation.classList.add('active');
+  startX = e.pageX - navigation.offsetLeft;
+  scrollLeft = navigation.scrollLeft;
 });
 
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('active');
+navigation.addEventListener('mouseleave', () => {
+  isDown = false;
+  navigation.classList.remove('active');
 });
 
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('active');
+navigation.addEventListener('mouseup', () => {
+  isDown = false;
+  navigation.classList.remove('active');
 });
 
-slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; // سرعة الحركة
-    slider.scrollLeft = scrollLeft - walk;
+navigation.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - navigation.offsetLeft;
+  const walk = (x - startX) * 2; // السرعة
+  navigation.scrollLeft = scrollLeft - walk;
 });
+/*
+=============================
+========End navigation=======
+=============================
+*/
+
+
+
+
+
